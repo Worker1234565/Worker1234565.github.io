@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Mulish', sans-serif;
+  }
+
+  body {
+    /* background-color: #b7d8fd;
+     */
+    background-image: url(https://vsthemes.org/uploads/posts/2017-12/1582033157_8k-minimalist_vsthemes_ru-17.webp);
+    background-size:cover;
+    color: #003366;
+    line-height: 1.6;
+
+  }
+
+  .container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+  }
+
+  /* Header */
+  header {
+    background-color: #0066cc;
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  }
+
+  .header-top {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo-img {
+    width: 80px;
+    transition: transform 0.3s ease;
+  }
+
+  .logo-img:hover {
+    transform: scale(1.05);
+  }
+
+  .header-nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  nav a {
+    margin-right: 25px;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    position: relative;
+  }
+  /* Стили для основного меню */
+  nav ul {
+    list-style: none;
+    position: relative;
+    display: flex; /* Flex только для основного меню */
+    align-items: center;
+    
+  }
+  nav ul li {
+    position: relative;
+    display: inline-block;
+    
+  }
+  nav ul li a {
+    padding: 10px;
+    display: block;
+  }
+  /* Стили для выпадающего подменю */
+  nav ul li ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #d9f0ff;
+    min-width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+    border-radius: 5px;
+    z-index: 1;
+    display: block; /* Убираем flex для подменю */
+    
+  }
+  nav ul li ul li {
+    display: block; /* Элементы подменю в столбик */
+    width: 100%;
+    
+  }
+  nav ul li ul li a {
+    margin: 0;
+    padding: 10px 15px;
+    color: #004080;
+    font-weight: 700;
+    display: block; /* Убедимся, что ссылки занимают всю ширину */
+  }
+  nav ul li ul li a:hover {
+    background-color: white;
+  }
+  /* Показ подменю при наведении */
+  nav ul li:hover > ul {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .nav-bot {
+    display: flex;
+    align-items: center;
+  }
+
+  .vk-icon {
+    width: 36px;
+    transition: transform 0.3s ease;
+  }
+
+  .vk-icon:hover {
+    transform: scale(1.1);
+  }
+
+  /* Main Section */
+  .main-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px;
+    background-color: #0486dd;
+    color: white;
+    gap: 40px;
+  }
+
+  .main-section h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    line-height: 1.2;
+  }
+
+  .main-section p {
+    font-size: 1.2rem;
+    margin: 20px 0;
+    opacity: 0.9;
+  }
+
+  .main-section button {
+    padding: 12px 30px;
+    background-color: #fff;
+    color: #007acc;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .main-section button:hover {
+    background-color: #e6f2ff;
+    transform: translateY(-2px);
+  }
+
+  .main-section img {
+    max-width: 50%;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Content Section */
+  .content {
+    padding: 60px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+  }
+  /* Content Section */
+.content {
+    padding: 60px;
+    background-color: #fff;
+  }
+  
+  .content h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #003366;
+  }
+  
+  .documents h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin: 20px 0 10px;
+    color: #003366;
+  }
+  
+  .documents ul, .documents ol {
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .documents li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #1d1d1d;
+    line-height: 1.8;
+  }
+  
+  .documents a {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: 700;
+  }
+  
+  .documents a:hover {
+    text-decoration: underline;
+  }
+  .document1 ul{
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+  /* Footer */
+  .footer {
+    background-color: #0b5daa;
+    color: white;
+    padding: 40px 60px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    font-weight: 600;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .footer div {
+    flex: 1;
+    min-width: 200px;
+  }
+  .line{
+    border-bottom: 1px solid #002b86;
+
+}
+

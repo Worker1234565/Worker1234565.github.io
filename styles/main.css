@@ -1,0 +1,371 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Mulish', sans-serif;
+  }
+
+  body {
+    /* background-color: #b7d8fd;
+     */
+    background-image: url(https://vsthemes.org/uploads/posts/2017-12/1582033157_8k-minimalist_vsthemes_ru-17.webp);
+    background-size:cover;
+    color: #003366;
+    line-height: 1.6;
+
+  }
+
+  .container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+  }
+
+  /* Header */
+  header {
+    background-color: #0066cc;
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  }
+
+  .header-top {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo-img {
+    width: 80px;
+    transition: transform 0.3s ease;
+  }
+
+  .logo-img:hover {
+    transform: scale(1.05);
+  }
+
+  .header-nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  nav a {
+    margin-right: 25px;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    position: relative;
+  }
+  /* Стили для основного меню */
+  nav ul {
+    list-style: none;
+    position: relative;
+    display: flex; /* Flex только для основного меню */
+    align-items: center;
+    
+  }
+  nav ul li {
+    position: relative;
+    display: inline-block;
+    
+  }
+  nav ul li a {
+    padding: 10px;
+    display: block;
+  }
+  /* Стили для выпадающего подменю */
+  nav ul li ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #d9f0ff;
+    min-width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+    border-radius: 5px;
+    z-index: 1;
+    display: block; /* Убираем flex для подменю */
+    
+  }
+  nav ul li ul li {
+    display: block; /* Элементы подменю в столбик */
+    width: 100%;
+    
+  }
+  nav ul li ul li a {
+    margin: 0;
+    padding: 10px 15px;
+    color: #004080;
+    font-weight: 700;
+    display: block; /* Убедимся, что ссылки занимают всю ширину */
+  }
+  nav ul li ul li a:hover {
+    background-color: white;
+  }
+  /* Показ подменю при наведении */
+  nav ul li:hover > ul {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .nav-bot {
+    display: flex;
+    align-items: center;
+  }
+
+  .vk-icon {
+    width: 36px;
+    transition: transform 0.3s ease;
+  }
+
+  .vk-icon:hover {
+    transform: scale(1.1);
+  }
+
+  /* Main Section */
+  .main-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px;
+    background-color: #0486dd;
+    color: white;
+    gap: 40px;
+  }
+
+  .main-section h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    line-height: 1.2;
+  }
+
+  .main-section p {
+    font-size: 1.2rem;
+    margin: 20px 0;
+    opacity: 0.9;
+  }
+
+  .main-section button {
+    padding: 12px 30px;
+    background-color: #fff;
+    color: #007acc;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .main-section button:hover {
+    background-color: #e6f2ff;
+    transform: translateY(-2px);
+  }
+
+  .main-section img {
+    max-width: 50%;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Content Section */
+  .content {
+    padding: 60px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  .banner-pobeda img {
+    width: 100%;
+    max-width: 1200px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .banner-problem-gos {
+    display: flex;
+    align-items: center;
+    background-color: #3393fa;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .banner-gosslug {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+  }
+
+  .banner-gosslug h1 {
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+
+  .banner-gosslug button {
+    width: 200px;
+    padding: 12px;
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .banner-gosslug button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(1.05);
+  }
+
+  .banner-gosslug-img img {
+    max-width: 400px;
+    height: 100%;
+    object-fit: cover;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+
+  .photo-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 60px;
+    align-items: start;
+  }
+
+  .main-img-gap img {
+    width: 100%;
+    max-width: 700px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .main-img-gap p {
+    font-size: 1rem;
+    color: #1d1d1d;
+    line-height: 1.8;
+    font-weight: 700;
+  }
+
+  .slugba {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .slugba img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    transition: transform 0.3s ease;
+  }
+
+  .slugba img:hover {
+    transform: scale(1.03);
+  }
+
+  /* Footer */
+  .footer {
+    background-color: #0b5daa;
+    color: white;
+    padding: 40px 60px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    font-weight: 600;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .footer div {
+    flex: 1;
+    min-width: 200px;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .container {
+      margin: 10px;
+    }
+
+    .main-section {
+      flex-direction: column;
+      text-align: center;
+      padding: 40px;
+    }
+
+    .main-section img {
+      max-width: 100%;
+      margin-top: 20px;
+    }
+
+    .photo-row {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    .banner-problem-gos {
+      flex-direction: column;
+    }
+
+    .banner-gosslug-img img {
+      max-width: 100%;
+      border-radius: 0;
+    }
+  }
+
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    nav ul {
+      flex-direction: column; /* Stack main menu items vertically on mobile */
+      gap: 10px;
+    }
+
+    nav ul li ul {
+      position: static;
+      transform: none;
+      opacity: 1;
+      visibility: visible;
+      display: none;
+      flex-direction: column; /* Stack dropdown items vertically on mobile */
+    }
+
+    nav ul li:hover > ul {
+      display: flex;
+    }
+
+    .content {
+      padding: 30px;
+    }
+
+    .footer {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
