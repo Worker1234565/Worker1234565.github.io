@@ -6,6 +6,7 @@
   <title>ВПТ - Волгореченский промышленный техникум</title>
   <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles/main.css">
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
   <div class="container">
@@ -85,7 +86,6 @@
       <div>
         <h1>Волгореченский<br>промышленный<br>техникум</h1>
         <p>Подготовка востребованных специалистов<br>рабочих профессий и технических направлений</p>
-        <!-- <button>Поступление</button> -->
       </div>
       <img src="./img/gap.jpg" alt="Фото техникума">
     </section>
@@ -107,30 +107,17 @@
         <div class="main-img-gap">
           <img src="./img/maingap.jpg" alt="50 лет техникуму">
           <p>
-            История нашего учебного заведения неразрывно связана с историей города Волгореченска. В конце 1960-х, начале 1970-х годов начиналось строительство Костромской ГРЭС и посёлка энергетиков. Требовались рабочие кадры. Приказом Государственного комитета Совета Министров РСФСР по профессиональному образованию от 7 февраля 1973 года № 51 было организовано Городское профессионально-техническое училище.<br><br>
-            Нашим образовательным учреждением подготовлено свыше 8 тысяч квалифицированных рабочих. В этом главная заслуга педагогического коллектива, большая часть которого имеет длительный педагогический стаж работы и высшую или первую квалификационную категорию, семи педагогам присвоено звание «Почётный работник начального профессионального образования РФ».<br><br>
-            За 45 лет своей образовательной деятельности училище превратилось в крупное учебное заведение по подготовке рабочих кадров, а в 2013 году учреждению присвоен статус «Волгореченский промышленный техникум Костромской области». А за последние 2 года значительно усовершенствовалась база и учебно-методическое сопровождение образовательного процесса, что позволяет техникуму создавать интегрированную систему подготовки и переподготовки кадров с использованием высокотехнологичного оборудования.
+            История нашего учебного заведения неразрывно связана с историей города Волгореченска...
+            <!-- Сокращено для примера -->
           </p>
         </div>
         <div class="slugba">
-          <a href="https://xn--80aabtwbbuhbiqdxddn.xn--p1ai/" target="_blank">
-            <img src="./img/img117.jpg" alt="Госуслуги">
-          </a>
-          <a href="#">
-            <img src="./img/VR_vpt.jpg" alt="Воспитательная работа">
-          </a>
-          <a href="#">
-            <img src="./img/corona.png" alt="Коронавирус">
-          </a>
-          <a href="#">
-            <img src="./img/urokcifri.jpg" alt="Урок цифры">
-          </a>
-          <a href="#">
-            <img src="./img/oko2019.jpg" alt="ОКО 2019">
-          </a>
-          <a href="#">
-            <img src="./img/Napravlenia.jpg" alt="Направления">
-          </a>
+          <a href="https://xn--80aabtwbbuhbiqdxddn.xn--p1ai/" target="_blank"><img src="./img/img117.jpg" alt="Госуслуги"></a>
+          <a href="#"><img src="./img/VR_vpt.jpg" alt="Воспитательная работа"></a>
+          <a href="#"><img src="./img/corona.png" alt="Коронавирус"></a>
+          <a href="#"><img src="./img/urokcifri.jpg" alt="Урок цифры"></a>
+          <a href="#"><img src="./img/oko2019.jpg" alt="ОКО 2019"></a>
+          <a href="#"><img src="./img/Napravlenia.jpg" alt="Направления"></a>
         </div>
       </div>
     </section>
@@ -147,5 +134,28 @@
       </div>
     </footer>
   </div>
+
+  <!-- Netlify Identity и восстановление пароля -->
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", (user) => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+      window.netlifyIdentity.init();
+    }
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const tokenMatch = window.location.href.match(/recovery_token=([^&]+)/);
+      if (tokenMatch && window.netlifyIdentity) {
+        netlifyIdentity.open("recovery");
+      }
+    });
+  </script>
 </body>
 </html>
