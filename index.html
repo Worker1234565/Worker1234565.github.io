@@ -134,14 +134,26 @@
 
   <!-- Скрипт инициализации Netlify Identity -->
   <script>
+    // Инициализация Netlify Identity
     if (window.netlifyIdentity) {
       window.netlifyIdentity.on("init", (user) => {
         if (!user) {
+          const fragment = window.location.hash.substring(1);
+          const params = new URLSearchParams(fragment);
+
+          // Обработка токенов
+          if (params.has("invite_token")) {
+            netlifyIdentity.acceptInvite(params.get("invite_token"));
+          } else if (params.has("recovery_token")) {
+            netlifyIdentity.recoverAccount(params.get("recovery_token"));
+          }
+
           window.netlifyIdentity.on("login", () => {
-            document.location.href = "/admin/";
+            document.location.href = "/";
           });
         }
       });
+
       window.netlifyIdentity.init();
     }
   </script>
