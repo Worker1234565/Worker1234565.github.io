@@ -6,6 +6,8 @@
   <title>ВПТ - Волгореченский промышленный техникум</title>
   <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles/main.css">
+
+  <!-- Подключаем Netlify Identity Widget -->
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
@@ -108,11 +110,12 @@
           <img src="./img/maingap.jpg" alt="50 лет техникуму">
           <p>
             История нашего учебного заведения неразрывно связана с историей города Волгореченска...
-            <!-- Сокращено для примера -->
           </p>
         </div>
         <div class="slugba">
-          <a href="https://xn--80aabtwbbuhbiqdxddn.xn--p1ai/" target="_blank"><img src="./img/img117.jpg" alt="Госуслуги"></a>
+          <a href="https://xn--80aabtwbbuhbiqdxddn.xn--p1ai/" target="_blank">
+            <img src="./img/img117.jpg" alt="Госуслуги">
+          </a>
           <a href="#"><img src="./img/VR_vpt.jpg" alt="Воспитательная работа"></a>
           <a href="#"><img src="./img/corona.png" alt="Коронавирус"></a>
           <a href="#"><img src="./img/urokcifri.jpg" alt="Урок цифры"></a>
@@ -123,19 +126,13 @@
     </section>
 
     <footer class="footer">
-      <div>
-        Время работы: Пн-Пт 7:30–16:00
-      </div>
-      <div>
-        Документы | Сведения об образовательной организации | Расписание
-      </div>
-      <div>
-        Пн–Пт, 6:00–10:30
-      </div>
+      <div>Время работы: Пн-Пт 7:30–16:00</div>
+      <div>Документы | Сведения об образовательной организации | Расписание</div>
+      <div>Пн–Пт, 6:00–10:30</div>
     </footer>
   </div>
 
-  <!-- Netlify Identity и восстановление пароля -->
+  <!-- Скрипт инициализации Netlify Identity -->
   <script>
     if (window.netlifyIdentity) {
       window.netlifyIdentity.on("init", (user) => {
@@ -147,15 +144,6 @@
       });
       window.netlifyIdentity.init();
     }
-  </script>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const tokenMatch = window.location.href.match(/recovery_token=([^&]+)/);
-      if (tokenMatch && window.netlifyIdentity) {
-        netlifyIdentity.open("recovery");
-      }
-    });
   </script>
 </body>
 </html>
