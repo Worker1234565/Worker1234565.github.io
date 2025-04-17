@@ -1,18 +1,16 @@
 backend:
-  name: github
-  repo: Worker1234565/Worker1234565.github.io
-  branch: main
+  name: git-gateway
+  branch: main  # Указываем ветку, с которой будет работать CMS. Например, 'main' или 'master'.
 
-media_folder: "img/uploads"
-public_folder: "/img/uploads"      
+media_folder: "static/img"  # Папка, где будут храниться медиа файлы.
+public_folder: "/img"  # Публичный путь для медиа файлов.
 
 collections:
-  - name: "pages"
-    label: "Страницы"
-    files:
-      - label: "Главная"
-        name: "home"
-        file: "index.html"
-        fields:
-          - {label: "Заголовок", name: "title", widget: "string"}
-          - {label: "Контент", name: "body", widget: "markdown"}
+  - name: "blog"  # Имя коллекции, например, для блога
+    label: "Blog Posts"
+    folder: "content/blog"  # Папка, где хранятся твои записи блога
+    create: true  # Разрешить создание новых файлов
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"  # Шаблон для названия файла
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
