@@ -1,0 +1,25 @@
+backend:
+  name: git-gateway
+  branch: main  # Указываем ветку, с которой будет работать CMS
+
+media_folder: "static/img"  # Папка для хранения медиа файлов
+public_folder: "/img"  # Публичный путь для медиа файлов
+
+collections:
+  - name: "documents"  # Имя коллекции, например, для документов
+    label: "Documents"
+    folder: "documents"  # Папка с документами
+    create: true  # Разрешить создание новых файлов
+    slug: "{{year}}_{{slug}}"  # Шаблон для названия файла
+    fields:
+      - { label: "Title", name: "title", widget: "string" }  # Заголовок документа
+      - { label: "File", name: "file", widget: "file" }  # Файл документа
+
+  - name: "images"  # Коллекция для изображений
+    label: "Images"
+    folder: "static/img"  # Папка с изображениями
+    create: true  # Разрешить создание новых изображений
+    slug: "{{filename}}"  # Использовать имя файла для изображения
+    fields:
+      - { label: "Image", name: "image", widget: "image" }  # Поле для изображений
+      - { label: "Alt text", name: "alt_text", widget: "string" }  # Альтернативный текст для изображения
