@@ -1,0 +1,18 @@
+backend:
+  name: github
+  repo: DARKSRG/DARKSRG.github.io
+  branch: main
+
+media_folder: "img/uploads"
+public_folder: "/img/uploads"
+
+collections:
+  - name: "pages"
+    label: "Страницы"
+    files:
+      - label: "Главная"
+        name: "home"
+        file: "index.html"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Контент", name: "body", widget: "markdown"}
