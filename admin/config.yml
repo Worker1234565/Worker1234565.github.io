@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: DARKSRG/DARKSRG.github.io
+  repo: Worker1234565/Worker1234565.github.io
   branch: main
 
 media_folder: "img/uploads"
@@ -14,5 +14,5 @@ collections:
         name: "home"
         file: "index.html"
         fields:
-          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Заголовок", name: "title", widget: "string"}
           - {label: "Контент", name: "body", widget: "markdown"}
